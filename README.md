@@ -3,6 +3,7 @@ public static String getRealPathFromURI(Context context, Uri contentUri) {
    Cursor cursor = null;
    
    try {
+   
        String[] proj = {MediaStore.Files.FileColumns.DATA};
        //String[] proj = {MediaStore.Images.Media.DATA};
        cursor = context.getContentResolver().query(contentUri, proj, null, null, null);
